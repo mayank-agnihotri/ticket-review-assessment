@@ -1,0 +1,8 @@
+# Copy to application-local.yml (gitignored) for local overrides.
+# Example: spring.config.activate.on-profile=local in application.yml or SPRING_PROFILES_ACTIVE=local
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ticketmgmt
+    username: ticket
+    password: change-me

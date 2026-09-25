@@ -1,0 +1,27 @@
+spring:
+  ai:
+    vectorstore:
+      type: pgvector
+    ollama:
+      base-url: ${OLLAMA_BASE_URL:http://localhost:11434}
+      chat:
+        options:
+          model: ${OLLAMA_CHAT_MODEL:llama3.2}
+          temperature: 0
+      embedding:
+        options:
+          model: ${OLLAMA_EMBEDDING_MODEL:nomic-embed-text}
+  flyway:
+    enabled: true
+    locations: classpath:db/migration,classpath:db/postgres
+  jpa:
+    hibernate:
+      ddl-auto: validate
+
+app:
+  rag:
+    top-k: 2
+    similarity-threshold: 0.45
+    embedding-dimensions: 768
+    vector-store:
+      type: pgvector

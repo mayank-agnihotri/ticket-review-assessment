@@ -1,0 +1,23 @@
+spring:
+  ai:
+    vectorstore:
+      type: pgvector
+  flyway:
+    enabled: true
+    locations: classpath:db/migration,classpath:db/postgres
+  jpa:
+    hibernate:
+      ddl-auto: validate
+  autoconfigure:
+    exclude:
+      - org.springframework.ai.model.ollama.autoconfigure.OllamaChatAutoConfiguration
+      - org.springframework.ai.model.ollama.autoconfigure.OllamaEmbeddingAutoConfiguration
+
+app:
+  rag:
+    top-k: 5
+    # Low threshold for deterministic test embeddings; production default remains 0.65 in application.yml
+    similarity-threshold: 0.0
+    embedding-dimensions: 768
+    vector-store:
+      type: pgvector
