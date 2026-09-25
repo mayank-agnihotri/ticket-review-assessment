@@ -1,0 +1,101 @@
+# --- OS / editor ---
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# --- Local environment & secrets (never commit) ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.jks
+*.keystore
+secrets/
+**/secrets/
+credentials.json
+service-account*.json
+application-local.yml
+application-local.yaml
+application-local.properties
+
+# --- Java / JVM ---
+*.class
+*.jar
+*.war
+*.ear
+*.log
+hs_err_pid*
+replay_pid*
+
+# --- Gradle ---
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# --- Spring Boot ---
+target/
+.springBeans
+.factorypath
+
+# --- IntelliJ IDEA ---
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+.idea_modules/
+atlassian-ide-plugin.xml
+
+# --- Node.js / Next.js ---
+node_modules/
+.npm
+.pnpm-store/
+.yarn/
+.yarn/cache/
+.yarn/unplugged/
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+.next/
+out/
+dist/
+.turbo/
+.vercel/
+*.tsbuildinfo
+next-env.d.ts
+coverage/
+.nyc_output/
+
+# --- Testing / reports ---
+test-results/
+playwright-report/
+blob-report/
+*.lcov
+
+# --- Docker & local data volumes ---
+docker-data/
+postgres-data/
+pgdata/
+**/pgdata/
+*.sql.gz
+volume-data/
+
+# --- Ollama / local model artifacts ---
+.ollama/
+models/
+*.gguf
+
+# --- Misc generated ---
+*.tmp
+*.bak
+.cache/
+.sass-cache/
+*.pid
+*.seed
+*.pid.lock
